@@ -1,0 +1,127 @@
+/*
+ * ROFI color theme
+ *
+ * Based on Lake Amadeus portal-themed colors
+ *
+ */
+
+* {
+	Black: #221c1a;
+	Gray: #ae9ca0;
+	Slate: #595453;
+	Orange: #aa5a23;
+	LightOrange: #ba7233;
+	Blue: #5367b0;
+	LightBlue: #8698bd;
+	Beige: #ac8e85;
+  	White: #c7c6c5;
+	DarkOrange: #aa4e16;
+	GrayBG: #221c1aAA;
+
+	spacing: 0;
+	background-color: transparent;
+
+	font: "Noto Sans 14";
+}
+
+window {
+	transparency: "real";
+	/* fullscreen: true; */
+	background-color: @GrayBG; /*Slate + 55 opacity*/
+}
+
+mainbox {
+	children: [inputbar, message, sidebar, listview];
+	spacing: 30px;
+	/*margin: 20%;*/
+	padding: 30px 0;
+	border: 1px;
+	border-color: @White;
+}
+
+inputbar {
+	padding: 0 20px;
+	children: [prompt, textbox-prompt-colon, entry, case-indicator];
+}
+
+prompt {
+	text-color: @Blue;
+	padding: 0 0 0 15px;
+}
+
+textbox-prompt-colon {
+	expand: false;
+	str: ":";
+	margin: 0 0ch 0 0;
+	text-color: @Blue;
+}
+
+entry {
+	text-color: @LightOrange;
+}
+
+case-indicator {
+	text-color: @White;
+}
+
+sidebar, message {
+	border: 1px 0;
+	border-color: @White;
+}
+
+button, textbox {
+	background-color: @White;
+	text-color: @White;
+	padding: 5px;
+}
+
+button selected {
+	background-color: @White;
+}
+
+listview {
+	scrollbar: true;
+	margin: 0 10px 0 30px;
+}
+
+scrollbar {
+	background-color: transparent;
+	handle-color: @Gray;
+	handle-width: 13px;
+	border: 0 0px;
+	border-color: @White;
+	margin: 0 0 0 20px;
+}
+
+element {
+	padding: 5px;
+	highlight: bold underline;
+}
+
+element normal {
+	background-color: transparent;
+}
+
+element selected {
+	background-color: #221c1a55;
+}
+
+element alternate {
+	/*background-color: @White;*/
+}
+
+element normal normal, element alternate normal {
+	text-color: @LightBlue;
+}
+
+element selected normal {
+	text-color: @Orange;
+}
+
+element normal urgent, element selected urgent, element alternate urgent {
+	text-color: @White;
+}
+
+element normal active, element selected active, element alternate active {
+	text-color: @White;
+}
